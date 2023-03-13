@@ -38,18 +38,18 @@ function App(){
             <h1 className="text-center p-4">Today's Plan</h1>
 
             <div className="row">
-              <div className="col-9">
+              <div className="col-md-9">
                 <input type="text" 
                 className="form-control" 
                 placeholder="Write Plan here" value={input.text} onChange={handleText} />
               </div>
-              <div className="col-3">
+              <div className="col-md-3">
                 <button className="btn btn-warning px-4 fw-bold" onClick={handleItems} >Add</button>
               </div>
             </div>
 
             <div className="container-fluid" >
-              <ul className="list-unstyled row m-5" >
+              <ul className="list-unstyled row mt-5 mx-3" >
                 {
                   input.itemList.map((value, idx)=>{
                     return <Plan value={value} idx={idx} handleDelete={handleDelete}/>
@@ -57,7 +57,6 @@ function App(){
                 }
               </ul>
             </div>
-
           </div>
         </div>
       </div>
